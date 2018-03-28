@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
+import utils
+import time
 
 ################################
 # Preparing Data
@@ -96,4 +98,5 @@ with tf.Session() as sess:
         "Survived": predictions
     })
 
-    submission.to_csv("data/titanic-submission.csv", index=False)
+    file_name = utils.get_file_name('result', 'titanic-submission')
+    submission.to_csv(file_name, index=False)
