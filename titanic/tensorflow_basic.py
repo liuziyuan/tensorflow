@@ -98,5 +98,5 @@ with tf.Session() as sess:
         "Survived": predictions
     })
 
-    file_name = utils.get_file_name('result', 'titanic-submission')
+    file_name = utils.get_file_name('result', 'trained_submission')
     submission.to_csv(file_name, index=False)
