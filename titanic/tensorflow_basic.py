@@ -4,13 +4,16 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 import utils
 import time
+import os
 
 ################################
 # Preparing Data
 ################################
 
 # read data from file
-data = pd.read_csv('data/train.csv')
+base_path = '/home/liuziyuan/Workspace/tensorflow/titanic/'
+data_path = os.path.join(base_path, 'data/train.csv')
+data = pd.read_csv(data_path)
 
 # fill nan values with 0
 data = data.fillna(0)

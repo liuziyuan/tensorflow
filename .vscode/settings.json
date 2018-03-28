@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/liuziyuan/.pyenv/versions/2.7.14/envs/tensorflow-2.7.14",
-    "python.linting.mypyPath": "/home/liuziyuan/.pyenv/versions/2.7.14/envs/tensorflow-2.7.14/lib/python2.7/site-packages"
+    "python.pythonPath": "/home/liuziyuan/.pyenv/versions/tensorflow-2.7.14",
+    "python.linting.mypyPath": "/home/liuziyuan/.pyenv/versions/tensorflow-2.7.14/lib/python2.7/site-packages"
 }
