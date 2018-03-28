@@ -11,8 +11,8 @@ import os
 ################################
 
 # read data from file
-base_path = '/home/liuziyuan/Workspace/tensorflow/titanic/'
-data_path = os.path.join(base_path, 'data/train.csv')
+
+data_path = os.path.join(utils.BASE_PATH, 'data/train.csv')
 data = pd.read_csv(data_path)
 
 # fill nan values with 0
@@ -90,7 +90,8 @@ with tf.Session() as sess:
     print("Accuracy on validation set (numpy): %.9f" % numpy_accuracy)
 
     # predict on test data
-    testdata = pd.read_csv('data/test.csv')
+    test_data_path = os.path.join(utils.BASE_PATH, 'data/test.csv')
+    testdata = pd.read_csv(test_data_path)
     testdata = testdata.fillna(0)
     # convert ['male', 'female'] values of Sex to [1, 0]
     testdata['Sex'] = testdata['Sex'].apply(lambda s: 1 if s == 'male' else 0)
